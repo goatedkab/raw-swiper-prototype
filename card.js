@@ -5,11 +5,13 @@ const saddislike = document.querySelector('.sad-dislike');
 class Card {
     constructor({
       imageUrl,
+      address,
       onDismiss,
       onLike,
       onDislike
     }) {
       this.imageUrl = imageUrl;
+      this.address = address
       this.onDismiss = onDismiss;
       this.onLike = onLike;
       this.onDislike = onDislike;
@@ -31,8 +33,22 @@ class Card {
       const card = document.createElement('div');
       card.classList.add('card');
       const img = document.createElement('img');
+      
+      const img_div = document.createElement("div");
+      img_div.classList.add('img_div');
       img.src = this.imageUrl;
-      card.append(img);
+      img_div.appendChild(img)
+      
+
+      
+      const address = document.createElement("div");
+      address.innerHTML = this.address;
+
+
+      card.append(img_div);
+      card.append(address);
+
+
       this.element = card;
       if (this.#isTouchDevice()) {
         this.#listenToTouchEvents();
@@ -88,14 +104,19 @@ class Card {
       }
 
 
-      if(this.#offsetX > 0) {
+      if(this.#offsetX > 1) {
         saddislike.style.visibility = 'hidden'; // hide, but lets the element keep its size
         heartlike.style.visibility = 'visible';
-
       }
-      else{
+      else if (this.#offsetX < -1){
         heartlike.style.visibility = 'hidden'; // hide, but lets the element keep its size
         saddislike.style.visibility = 'visible';
+      }
+      else{
+        console.log('goated')
+        heartlike.style.visibility = 'hidden'; // hide, but lets the element keep its size
+        saddislike.style.visibility = 'hidden';
+
       }
       
 

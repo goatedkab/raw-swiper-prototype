@@ -13,6 +13,17 @@ const urls = [
     'https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 ];
 
+const addresses = [
+  'your mums house',
+  'your dads house',
+  'your amns house',
+  'your nanas house',
+  'your nanas house',
+  'your nanas house',
+];
+
+
+
 // variables
 let cardCount = 0;
 
@@ -22,6 +33,7 @@ console.log(urls.length)
 function appendNewCard() {
   const card = new Card({
     imageUrl: urls[cardCount % urls.length],
+    address: addresses[cardCount % addresses.length],
     onDismiss: appendNewCard,
     onLike: () => {
       like.style.animationPlayState = 'running'; //activates the like button
@@ -44,6 +56,6 @@ console.log(card.imageUrl)
 
 
 // first 5 cards
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 3; i++) {
   appendNewCard();
 }
