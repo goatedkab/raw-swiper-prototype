@@ -1,3 +1,7 @@
+const heartlike = document.querySelector('.heart-like');
+const saddislike = document.querySelector('.sad-dislike');
+
+
 class Card {
     constructor({
       imageUrl,
@@ -36,6 +40,7 @@ class Card {
         this.#listenToMouseEvents();
       }
     }
+
   
     #listenToTouchEvents = () => {
       this.element.addEventListener('touchstart', (e) => {
@@ -75,14 +80,29 @@ class Card {
       const rotate = this.#offsetX * 0.01;
       this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
       // dismiss card
-      
-      console.log(this.#offsetX)
 
+
+      
       if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.1) {
         this.#dismiss(this.#offsetX > 0 ? 1 : -1);
       }
+
+
+      if(this.#offsetX > 0) {
+        saddislike.style.visibility = 'hidden'; // hide, but lets the element keep its size
+        heartlike.style.visibility = 'visible';
+
+      }
+      else{
+        heartlike.style.visibility = 'hidden'; // hide, but lets the element keep its size
+        saddislike.style.visibility = 'visible';
+      }
+      
+
     }
+
   
+    
     // mouse event handlers
     #handleMouseMove = (e) => {
       e.preventDefault();

@@ -39,6 +39,7 @@ function appendNewCard() {
   cards.forEach((card, index) => {
     card.style.setProperty('--i', index);
   });
+console.log(card.imageUrl)
 }
 
 
