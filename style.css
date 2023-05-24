@@ -1,3 +1,6 @@
+@import url(
+  'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -82,7 +85,7 @@
     font-size: 10vh;
     border-radius: 50%;
     padding: 20px;
-    position: relative;
+    position: absolute;
     z-index: 1;
     animation-name: animation1;
     animation-duration: 0.5s;
@@ -90,6 +93,7 @@
     animation-fill-mode: both;
     /* don't run animation at the beginning */
     animation-play-state: paused;
+    z-index: 30;
   }
 
   
@@ -112,7 +116,7 @@
   
     0%,
     100% {
-      opacity: 0.2;
+      opacity: 0;
     }
   
     50% {
@@ -124,7 +128,7 @@
   
     0%,
     100% {
-      opacity: 0.2;
+      opacity: 0;
     }
   
     50% {
@@ -134,44 +138,6 @@
   }
 
 
-  .tinder_love .fa-heart {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  
-  .tinder_nope .fa-remove {
-    opacity: 0.7;
-    transform: scale(1);
-  }
 
 
 
-
-
-  #popupicon{
-    position: absolute;
-    transition: opacity 0.1s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-
-  }
-
-  .heart-like{
-    position: absolute;
-    visibility: hidden;
-    height: 8vh;
-    z-index: 20;
-    opacity: 50%;
-  }
-
-  .sad-dislike{
-    position: absolute;
-    visibility: hidden;
-
-    height: 8vh;
-    z-index: 20;
-    opacity: 50%;
-
-  }

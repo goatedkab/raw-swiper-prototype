@@ -12,16 +12,21 @@ const property_cards = [
 ]
 
 
+
+
+
+
+
+
 // variables
 let cardCount = 0;
 
-console.log(urls.length)
 
 // functions
 function appendNewCard() {
   const card = new Card({
-    imageUrl: property_cards[cardCount % urls.length].url,
-    address: property_cards[cardCount % addresses.length].address,
+    imageUrl: property_cards[cardCount % property_cards.length].url,
+    address: property_cards[cardCount % property_cards.length].address,
     onDismiss: appendNewCard,
     onLike: () => {
       like.style.animationPlayState = 'running'; //activates the like button
