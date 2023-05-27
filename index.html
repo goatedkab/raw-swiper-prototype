@@ -6,25 +6,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Card Swiper</title>
-  <link rel="stylesheet" href="./style.css" >
+  <link rel="stylesheet" href="./styles/phonestyle.css" >
+  <link rel="stylesheet" href="./styles/homestyle.css" >
 </head>
 
 
 
 <body>
-  <ion-icon id="dislike" name="heart-dislike"></ion-icon>
-  <div class="text">
-
-    </div>    
-    <div id="swiper">
+  <section id="front-page">
+    <div class="left-side">
+      <div class="information">
+        <h1>
+          Swipe to your <br/>
+          future home.
+        </h1>
+        <p>
+          Roof, a renting platform powered by AI. <br/>
+          Get a new home fast that’s 100% your type on paper.
+        </p>
+        <button>
+          Stay in the loop!
+        </button>
+      </div>
+      </div>
     </div>
-  </div>
-  <ion-icon id="like" name="heart"></ion-icon>
-  
+    <div class="right-side">
+      <div class="phone-case">
+        <div class="phone-container-inner">
+
+          <div class="phone-section" id="phone-panel">
+          <div class="phone-panel">
+            <div class="phone-panel-lense">
+              <!-- <div class="lense-glare" id="blue-flare"></div>
+              <div class="lense-glare" id="green-flare"></div> -->
+            </div>
+            <div class="phone-panel-lense">
+              <!-- <div class="lense-glare" id="blue-flare"></div>
+              <div class="lense-glare" id="green-flare"></div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-section" id="phone-filters">
+        </div>
+
+        <div class="phone-section" id="phone-cards">
+        <div id="swiper">
+          <ion-icon id="like" name="heart"></ion-icon>
+          <ion-icon id="dislike" name="thumbs-down-sharp"></ion-icon>
+        </div>
+        </div>
+
+        <div class="phone-section" id="phone-buttons">
+        </div>
+
+
+        </div>
+    </div>
+</div>
+</section>
+
+
 
 
   <script src="./card.js"></script>
   <script src="./script.js"></script>
+  
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

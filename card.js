@@ -159,7 +159,7 @@ class Card {
       document.removeEventListener('mousemove', this.#handleMouseMove);
       document.removeEventListener('touchend', this.#handleTouchEnd);
       document.removeEventListener('touchmove', this.#handleTouchMove);
-      this.element.style.transition = 'transform 0.8s';
+      this.element.style.transition = 'transform 1s';
       this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${2 * direction}deg)`;
       this.element.classList.add('dismissing');
       setTimeout(() => {
