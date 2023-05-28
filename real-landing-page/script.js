@@ -6,9 +6,9 @@ const dislike = document.querySelector('#dislike');
 
 const property_cards = [
   {url:  'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  address: 'your mums house'},
+  address: '1 Hyde Park'},
   {url:  'https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80',
-  address: 'your dads house'},
+  address: '14 Ongar rd'},
 ]
 
 

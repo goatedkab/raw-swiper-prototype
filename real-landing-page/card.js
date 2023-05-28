@@ -43,6 +43,7 @@ class Card {
       
       const address = document.createElement("div");
       address.innerHTML = this.address;
+      address.classList.add('card-address');
 
 
       card.append(img_div);
