@@ -6,16 +6,16 @@ const img_srcs = [
 
 let slideIndex = 1;
 
+
+
 const slideshow = document.getElementById("slideshow");
 const dotHolder = document.createElement("div");
 dotHolder.classList.add('dot-holder');
-
 for(var i = 0, len = img_srcs.length;i<len;i++){
   const dot = document.createElement('div');
   dot.classList.add('dot');
   dotHolder.append(dot);
 }
-
 slideshow.appendChild(dotHolder);
 const dotholder = document.getElementsByClassName("dot-holder");
 
@@ -23,24 +23,18 @@ const dotholder = document.getElementsByClassName("dot-holder");
 
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-
-
-
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
 function showSlides(n) {
   let i;  
   let houseimage = document.getElementById("houseimage");
-  let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > img_srcs.length) {slideIndex = 1}
   if (n < 1) {slideIndex = img_srcs.length}
@@ -50,6 +44,5 @@ function showSlides(n) {
   houseimage.src = img_srcs[slideIndex-1]
   console.log(dots)
   dots[slideIndex-1].className += " active";
-
 }
 
