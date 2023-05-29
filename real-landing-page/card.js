@@ -39,8 +39,6 @@ class Card {
       img.src = this.imageUrl;
       img_div.appendChild(img)
       
-
-      
       const address = document.createElement("div");
       address.innerHTML = this.address;
       address.classList.add('card-address');
@@ -58,6 +56,9 @@ class Card {
       }
     }
 
+
+
+    
   
     #listenToTouchEvents = () => {
       this.element.addEventListener('touchstart', (e) => {

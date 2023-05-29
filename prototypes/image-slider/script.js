@@ -4,7 +4,33 @@ const img_srcs = [
   "https://rew-feed-images.global.ssl.fastly.net/bright/_cloud_media/all/residential/vaar2023956-1-bf37b46c2c859b0a7ce126eff1d1fe79-m.jpg"
   ]
 
+
+
+
+
+
 let slideIndex = 1;
+
+
+const slideshow = document.getElementById("slideshow");
+const dotHolder = document.createElement("div");
+dotHolder.classList.add('dot-holder');
+
+const dot = document.createElement("div");
+const dot1 = document.createElement("div");
+const dot2 = document.createElement("div");
+dot.classList.add('dot');
+dot1.classList.add('dot');
+dot2.classList.add('dot');
+dotHolder.append(dot)
+dotHolder.append(dot1)
+dotHolder.append(dot2)
+
+slideshow.appendChild(dotHolder);
+const dotholder = document.getElementsByClassName("dot-holder");
+
+
+
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -18,25 +44,22 @@ function currentSlide(n) {
 }
 
 
+
+
+
 function showSlides(n) {
-
   let i;  
-
   let houseimage = document.getElementById("houseimage");
-  // houseimage.src = img_srcs[0]
-  console.log(houseimage.src)
-  // let slides = document.getElementsByClassName("mySlides");
-
+  let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  
   if (n > img_srcs.length) {slideIndex = 1}
   if (n < 1) {slideIndex = img_srcs.length}
-
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-
-  // slides[slideIndex-1].style.display = "block";
   houseimage.src = img_srcs[slideIndex-1]
+  console.log(dots)
   dots[slideIndex-1].className += " active";
+
 }
+
