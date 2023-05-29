@@ -4,27 +4,17 @@ const img_srcs = [
   "https://rew-feed-images.global.ssl.fastly.net/bright/_cloud_media/all/residential/vaar2023956-1-bf37b46c2c859b0a7ce126eff1d1fe79-m.jpg"
   ]
 
-
-
-
-
-
 let slideIndex = 1;
-
 
 const slideshow = document.getElementById("slideshow");
 const dotHolder = document.createElement("div");
 dotHolder.classList.add('dot-holder');
 
-const dot = document.createElement("div");
-const dot1 = document.createElement("div");
-const dot2 = document.createElement("div");
-dot.classList.add('dot');
-dot1.classList.add('dot');
-dot2.classList.add('dot');
-dotHolder.append(dot)
-dotHolder.append(dot1)
-dotHolder.append(dot2)
+for(var i = 0, len = img_srcs.length;i<len;i++){
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  dotHolder.append(dot);
+}
 
 slideshow.appendChild(dotHolder);
 const dotholder = document.getElementsByClassName("dot-holder");
