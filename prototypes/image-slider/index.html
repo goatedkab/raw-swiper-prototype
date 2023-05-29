@@ -1,3 +1,4 @@
+<!-- ORIGINAL: https://www.w3schools.com/howto/howto_js_slideshow.asp --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,41 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Document</title>
-    <!-- ORIGINAL: https://www.w3schools.com/howto/howto_js_slideshow.asp --> 
+    <title>image slider</title>
 </head>
 <body>
-    <!-- Slideshow container -->
 <div class="slideshow-container" onclick=plusSlides(1)>
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides">
-      <!-- <div class="numbertext">1 / 3</div> -->
-      <img src="https://www.jamesedition.com/stories/wp-content/uploads/2022/03/mansions_main_fin.jpg" style="width:100%">
+  <div class="img_div">
+      <img style="width:100%" id="houseimage">
     </div>
-  
-    <div class="mySlides">
-      <!-- <div class="numbertext">2 / 3</div> -->
-      <img src="https://www.homeviews.com/wp-content/uploads/2021/10/What-does-terraced-house-mean-1980x1137.jpg?x82599" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <!-- <div class="numbertext">3 / 3</div> -->
-        <img src=" https://rew-feed-images.global.ssl.fastly.net/bright/_cloud_media/all/residential/vaar2023956-1-bf37b46c2c859b0a7ce126eff1d1fe79-m.jpg
-        ">
-    </div>
-  
-    <!-- Next and previous buttons -->
-  </div>
   <br>
-  
-  <!-- The dots/circles -->
-  <div style="text-align:center">
+    <div class = "dot-holder">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
-
   </div>
+</div>
   <script src="script.js"></script>
 </body>
 </html>

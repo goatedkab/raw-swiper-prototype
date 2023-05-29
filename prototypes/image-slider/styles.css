@@ -6,78 +6,53 @@
   height: 400px;
   position: relative;
   margin: auto;
-  background-color: bisque;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Hide the images by default */
-.mySlides {
-  display: none;
+
+.img_div{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem 0.7rem 0rem 0rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: rgb(232, 232, 232);  
+  overflow: hidden;
+
 }
 
 .slideshow-container img{
-    max-width: 500px;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;  
 }
 
 /* The dots/bullets/indicators */
+
+.dot-holder{
+  text-align:center;
+  position: absolute;
+  bottom: 2rem;
+}
+
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #e2e2e2;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.2s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #ffffff;
 }
 
